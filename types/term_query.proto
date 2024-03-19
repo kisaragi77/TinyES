@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package types;
+
+import "doc.proto";  
+
+message TermQuery {
+    Keyword Keyword = 1;    
+    repeated TermQuery Must = 2;
+    repeated TermQuery Should = 3;
+}
